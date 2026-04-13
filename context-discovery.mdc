@@ -1,0 +1,16 @@
+---
+description: Instructions for proactively scanning documentation and docstrings before answering.
+globs: *
+---
+# Context Discovery & Awareness
+
+## Core Behavior
+At the start of each new chat, or when the conversation shifts to a new feature or part of the code, you must proactively gather context before making assumptions or writing code.
+
+## Actions to Take
+* **Scan Docs:** Search for and read any relevant `.md`, `.mdx`, or `docs/` files related to the current topic.
+* **Scan Docstrings:** Look up and read important module-level documentation, function docstrings, and type definitions that you deem relevant.
+* **Follow the Code:** If a lifecycle or mechanism relies on internal libraries or downstream functions, use your search tools to find and read their specific docstrings, even if they are not in the immediate vicinity.
+
+## Philosophy
+Do not guess how local systems or complex lifecycles work. Always look for the written truth in project documentation and code comments first.

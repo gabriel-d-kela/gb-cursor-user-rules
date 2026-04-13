@@ -1,0 +1,49 @@
+c---
+description: Rules for git operations and commit formatting
+globs: *
+---
+# Git Workflow & Commits
+
+## Core Behavior
+* NEVER run `git commit` unless explicitly asked.
+* After making changes, always wait for review and explicit approval before committing.
+
+## Git Commit Philosophy
+Git commits are documentation snapshots capturing *why* decisions were made at that point in time. Reasoning that would be dangerous in code comments (which go stale) belongs here. Reader should understand the thought process without overexplanation.
+
+## Format Structure
+<label>: <lowercase tldr>
+
+* <Properly cased main point>
+  - Technical sub-detail
+  - Another sub-detail
+* <Another main point>
+  - Sub-detail
+
+## Formatting Rules
+* Subject line: 50 chars ideal, 72 max.
+* Body lines: 72 chars max (wrap and indent as needed).
+* NO empty lines between bullet points.
+* Label: domain/component (e.g., "telemetry", "ui", "api") or commit type (e.g., "bug", "feat") if more relevant.
+* TLDR: concise, lowercase.
+* Main bullets: asterisks (*) with proper casing.
+* Sub-bullets: dashes (-), indented 2 spaces.
+* Prioritize concise and easy-to-read text over strict grammatical correctness.
+* Not too technical - make it easy to understand.
+* Always include WHY decisions were made.
+* Don't overexplain - just enough context.
+
+## Example
+telemetry: add metrics support for client apps
+
+* Add recordGauge and recordCounter AIDL methods for client
+  metric submission
+  - Gauges track current state, counters track cumulative values
+  - Different semantics require different handling
+* Register metrics lazily on first client submission
+  - Clients send metrics dynamically without coordination
+  - Single metric name supports multiple time series via
+    attributes
+* Filter stale gauge values (>5min) for graceful degradation
+  - Keeps exporting last value rather than dropping metric
+  - Prevents dashboard gaps when clients disconnect

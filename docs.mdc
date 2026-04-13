@@ -1,0 +1,18 @@
+---
+description: Philosophy and style guide for writing project documentation
+globs: *.md, *.mdx, docs/*
+---
+# Documentation Guidelines
+
+## Philosophy
+* Documentation must be concise and easy to read.
+* Do not go overboard trying to sound smart or sophisticated. Simple, direct information is required.
+* Prioritize readability and ease of understanding, even at the expense of grammatical correctness.
+
+## Scope & Technical Depth
+* Focus on the scope and the *why* behind how things are done.
+* Avoid delving into deep technical details. Highly technical details change often, leaving docs outdated and causing confusion. Only include technical specifics if they are critical and unlikely to change.
+
+## Avoid Redundancy
+* Do not explain the same mechanism in multiple places.
+* Having redundant explanations under different scopes is dangerous because it requires remembering to update all instances when changes occur. Keep a single source of truth.

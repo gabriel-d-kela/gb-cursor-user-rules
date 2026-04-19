@@ -1,5 +1,5 @@
 ---
-description: Instructions for proactively scanning documentation and docstrings before answering.
+description: Instructions for proactively scanning documentation, docstrings, and branch history before answering.
 globs: *
 ---
 # Context Discovery & Awareness
@@ -11,6 +11,7 @@ At the start of each new chat, or when the conversation shifts to a new feature 
 * **Scan Docs:** Search for and read any relevant `.md`, `.mdx`, or `docs/` files related to the current topic.
 * **Scan Docstrings:** Look up and read important module-level documentation, function docstrings, and type definitions that you deem relevant.
 * **Follow the Code:** If a lifecycle or mechanism relies on internal libraries or downstream functions, use your search tools to find and read their specific docstrings, even if they are not in the immediate vicinity.
+* **Check Branch Context:** If working on an ongoing branch, heavily review recent commits in that branch to understand the current effort. If the intent of the recent work is not completely clear, ASK. Do not make assumptions.
 
 ## Philosophy
-Do not guess how local systems or complex lifecycles work. Always look for the written truth in project documentation and code comments first.
+Do not guess how local systems, complex lifecycles, or active branch efforts work. Always look for the written truth in project documentation, code comments, and git history first.

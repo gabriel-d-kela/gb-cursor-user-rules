@@ -1,0 +1,20 @@
+---
+description: Guidelines for in-code comments, balancing human readability and AI context windows.
+globs: *
+---
+# In-Code Comments & AI Context
+
+## Core Philosophy
+* Comments are written for both human developers and AI context windows.
+* Apply common sense: code should be as self-documenting as possible, but do not hide crucial context just to keep the file clean.
+* Keep all explanations highly concise. Deliver the information directly without adding pretty words or sophisticated fluff. Grammatical correctness is secondary to conveying the point.
+
+## When and What to Comment
+* **The "What" and "Warning":** Briefly explain complex blocks or warn about non-obvious side effects.
+* **The "Why" (Current Context):** Include the "why" in code comments if it prevents a developer or an AI agent from making dangerous assumptions, breaking architectural constraints, or "fixing" a necessary workaround.
+* **The "Why" (Historical Context):** Long, historical journeys of how a piece of code evolved over time belong in the git commit message, not the code.
+
+## Restrictions
+* If doing something exceptional, weird, or specifically constrained, explain it briefly right there.
+* Do not state the obvious or generate boilerplate docstrings for simple functions.
+* Do not overexplain. Give the AI and the human just enough context to understand the boundaries of the code they are looking at.

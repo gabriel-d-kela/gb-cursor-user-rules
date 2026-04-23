@@ -1,0 +1,20 @@
+---
+description: Guidelines for in-code comments and project documentation.
+globs: *
+---
+# Code Comments & Documentation
+
+## Core Writing Philosophy
+* Keep all explanations highly concise. Deliver information directly without pretty words or sophisticated fluff.
+* Readability and ease of understanding beat strict grammatical correctness.
+* Focus on the *why* and the scope.
+
+## In-Code Comments
+* **The "What" and "Warning":** Briefly explain complex blocks or warn about non-obvious side effects.
+* **The "Why" (Current Context):** Include if it prevents dangerous assumptions or "fixing" a necessary workaround.
+* **Restrictions:** Explain exceptional/weird stuff briefly right there. Do not state the obvious, generate boilerplate for simple functions, or overexplain. 
+* Long historical journeys belong in git commits, not code.
+
+## Project Documentation (Markdown)
+* Avoid deep technical details that change often. Only include if critical and unlikely to change.
+* Do not explain the same mechanism in multiple places. Maintain a single source of truth to avoid update drift and confusion.
